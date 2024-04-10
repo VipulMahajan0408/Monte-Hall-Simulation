@@ -25,8 +25,8 @@ python prob.py --num_doors <value> --num_doors_opened_by_host <value> --num_simu
 3) You will get the results in the terminal
 
 ## Mathematical Analysis
-* Initially, you have a 1/n probability of choosing the car behind the door. so if we stick to our decision then Prob_stick(winning car) is 1/n.
-* The probability of picking the car if you choose a different door is the chance of not having picked the car in the first place, which is (n−1) / n ,times the probability
+* Initially, you have a 1/n probability of choosing the prize behind the door. So if we stick to our decision, Prob_stick(winning) will be 1/n.
+* The probability of picking the prize if you choose a different door is the chance of not having picked the prize in the first place, which is (n−1) / n, times the probability
 of picking it now, which is 1 / (n−k−1), which is 1/n * ((n-1)/(n-k-1)).
 
 
