@@ -1,7 +1,7 @@
 # Monte-Hall-Simulation
 
 ## Scenario
-Suppose you are on a game show and presented with n doors: behind one door is a car, and behind the other n-1 doors are goats. You pick a door, but before it is revealed, the host, who knows what is behind each door, opens k doors (1<=k<=n-2) of the remaining doors and reveals a goat. He then allows you to switch your choice to the other unopened door. So, we have to simulate the above scenario to find the winning probability if we switch the doors or stick to our former decision.
+Suppose you are on a game show and presented with n doors: behind one door is a car, and behind the other n-1 doors are goats. You pick a door, but before it is revealed, the host, who knows what is behind each door, opens k doors (0<=k<=n-2) of the remaining doors and reveals a goat. He then allows you to switch your choice to the other unopened door. So, we have to simulate the above scenario to find the winning probability if we switch the doors or stick to our former decision.
 
 ## C++
 ### Steps for running the code
@@ -23,3 +23,10 @@ Suppose you are on a game show and presented with n doors: behind one door is a 
 python prob.py --num_doors <value> --num_doors_opened_by_host <value> --num_simulations <value>
 ```
 3) You will get the results in the terminal
+
+## Mathematical Analysis
+* Initially, you have a 1/n probability of choosing the car behind the door. so if we stick to our decision then Prob_stick(winning car) is 1/n.
+* The probability of picking the car if you choose a different door is the chance of not having picked the car in the first place, which is (n−1) / n ,times the probability
+of picking it now, which is 1 / (n−k−1), which is 1/n * ((n-1)/(n-k-1)).
+
+
